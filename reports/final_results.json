@@ -1,0 +1,37 @@
+{
+  "intensity": {
+    "model": "Multimodal CNN + GRU",
+    "mae_kt": 3.47,
+    "baseline_metadata_only_mae_kt": 3.31
+  },
+  "track": {
+    "6h": {
+      "velocity_only_km": 26.04,
+      "motion_trend_km": 27.76
+    },
+    "12h": {
+      "multistep_gru_km": 57.26,
+      "motion_trend_km": 62.91
+    },
+    "18h": {
+      "multistep_gru_km": 91.22,
+      "motion_trend_km": 103.61
+    },
+    "24h": {
+      "multistep_gru_km": 128.58,
+      "motion_trend_km": 149.56
+    }
+  },
+  "ri": {
+    "model": "Metadata-only GRU",
+    "roc_auc": 0.6113,
+    "pr_auc": 0.2383,
+    "f1": 0.3011
+  },
+  "uncertainty_km": {
+    "6h": 10.65,
+    "12h": 19.9,
+    "18h": 29.18,
+    "24h": 40.95
+  }
+}
