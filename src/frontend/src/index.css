@@ -1,0 +1,1509 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #080c14;
+  color: #f8fafc;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(37, 99, 235, 0.08),
+      transparent 35%
+    ),
+    #080c14;
+}
+
+
+/* HEADER */
+
+.header {
+  height: 82px;
+  padding: 0 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #1d2633;
+
+  background: rgba(8, 12, 20, 0.94);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon {
+  font-size: 36px;
+}
+
+.brand h1 {
+  margin: 0;
+
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.brand p {
+  margin: 4px 0 0;
+
+  color: #8290a3;
+  font-size: 12px;
+}
+
+.header-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #22c55e;
+
+  box-shadow:
+    0 0 12px rgba(34, 197, 94, 0.7);
+}
+
+
+/* LAYOUT */
+
+.layout {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+
+  min-height: calc(100vh - 82px);
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+  padding: 30px 24px;
+
+  border-right: 1px solid #1d2633;
+
+  background: #111722;
+
+  position: sticky;
+  top: 0;
+
+  height: calc(100vh - 82px);
+}
+
+.sidebar-title {
+  margin-bottom: 28px;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #a3afbf;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.sidebar select {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid #2a3545;
+  border-radius: 9px;
+
+  background: #090e17;
+  color: white;
+
+  outline: none;
+}
+
+.control-section {
+  margin-top: 30px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #60a5fa;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 5px;
+
+  color: #718096;
+  font-size: 11px;
+}
+
+.time-display {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 18px;
+
+  color: #8c99aa;
+  font-size: 12px;
+}
+
+
+/* INFO CARDS */
+
+.sidebar-cards {
+  margin-top: 45px;
+}
+
+.info-card {
+  padding: 22px 14px;
+
+  margin-bottom: 18px;
+
+  text-align: center;
+
+  background: #171e2a;
+
+  border: 1px solid #2b3748;
+  border-radius: 14px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.info-card span {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #8da3c0;
+  font-size: 14px;
+}
+
+.info-card strong {
+  color: white;
+  font-size: 17px;
+}
+
+
+/* CONTENT */
+
+.content {
+  max-width: 1500px;
+
+  width: 100%;
+
+  padding: 40px 48px;
+
+  margin: auto;
+}
+
+
+/* HEADINGS */
+
+.page-heading,
+.section-heading {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-heading {
+  margin-bottom: 25px;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+
+  color: #60a5fa;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  margin: 0;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.page-heading p,
+.section-heading p {
+  margin: 7px 0 0;
+
+  color: #7f8da0;
+
+  font-size: 13px;
+}
+
+.model-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 12px;
+
+  border: 1px solid #26364d;
+  border-radius: 20px;
+
+  color: #60a5fa;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* STATS */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 36px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  min-height: 105px;
+
+  padding: 20px;
+
+  background: #111722;
+
+  border: 1px solid #202b3b;
+  border-radius: 14px;
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  color: #60a5fa;
+
+  background: #17253a;
+}
+
+.stat-label {
+  color: #8190a4;
+  font-size: 12px;
+}
+
+.stat-value {
+  margin-top: 5px;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.stat-card.orange .stat-icon {
+  color: #fb923c;
+  background: #2a2119;
+}
+
+.stat-card.moderate .stat-icon {
+  color: #facc15;
+}
+
+.stat-card.high .stat-icon {
+  color: #fb923c;
+}
+
+.stat-card.very-high .stat-icon {
+  color: #ef4444;
+}
+
+
+/* MAP */
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.view-switch {
+  display: flex;
+
+  padding: 3px;
+
+  border: 1px solid #283447;
+  border-radius: 9px;
+
+  background: #101620;
+}
+
+.view-switch button {
+  border: 0;
+
+  padding: 9px 14px;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #8190a4;
+
+  cursor: pointer;
+}
+
+.view-switch button.active {
+  background: #1c4e8f;
+
+  color: white;
+}
+
+.map-wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid #243043;
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.25);
+}
+
+.cyclone-map {
+  height: 560px;
+  width: 100%;
+}
+
+.map-legend {
+  position: absolute;
+
+  left: 18px;
+  bottom: 18px;
+
+  z-index: 1000;
+
+  display: flex;
+  gap: 14px;
+
+  padding: 10px 13px;
+
+  border: 1px solid #273345;
+  border-radius: 9px;
+
+  background: rgba(10, 15, 24, 0.9);
+
+  font-size: 11px;
+}
+
+.map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+}
+
+.legend-dot.historical {
+  background: #3b82f6;
+}
+
+.legend-dot.forecast {
+  background: #f97316;
+}
+
+.legend-dot.uncertainty {
+  background: #a78bfa;
+}
+
+
+/* TIMELINE */
+
+.timeline-heading {
+  margin-top: 38px;
+}
+
+.forecast-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.forecast-card {
+  padding: 18px;
+
+  background: #111722;
+
+  border: 1px solid #202b3b;
+  border-radius: 13px;
+}
+
+.forecast-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+
+  color: #60a5fa;
+
+  font-weight: 700;
+}
+
+.risk-pill {
+  padding: 4px 8px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.risk-pill.low {
+  color: #4ade80;
+  background: #12301f;
+}
+
+.risk-pill.moderate {
+  color: #facc15;
+  background: #332c0b;
+}
+
+.risk-pill.high {
+  color: #fb923c;
+  background: #38200e;
+}
+
+.risk-pill.very-high {
+  color: #f87171;
+  background: #3b1515;
+}
+
+.forecast-position {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 15px;
+}
+
+.forecast-position small {
+  display: block;
+
+  color: #69778b;
+
+  font-size: 9px;
+}
+
+.forecast-position strong {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 17px;
+}
+
+.forecast-distance {
+  display: flex;
+
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 18px;
+
+  padding-top: 12px;
+
+  border-top: 1px solid #202a38;
+
+  color: #8997aa;
+
+  font-size: 11px;
+}
+
+
+/* PERFORMANCE */
+
+.performance-heading {
+  margin-top: 40px;
+}
+
+.performance-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.performance-card {
+  padding: 20px;
+
+  background: #111722;
+
+  border: 1px solid #202b3b;
+  border-radius: 13px;
+}
+
+.performance-card span {
+  color: #60a5fa;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.performance-card strong {
+  display: block;
+
+  margin-top: 10px;
+
+  font-size: 25px;
+}
+
+.performance-card small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #718096;
+}
+
+
+/* FOOTER */
+
+footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 55px;
+  padding-top: 20px;
+
+  border-top: 1px solid #1d2633;
+
+  color: #667386;
+
+  font-size: 11px;
+}
+
+
+/* LOADING */
+
+.loading {
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  background: #080c14;
+
+  color: #60a5fa;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+  .layout {
+    grid-template-columns: 250px 1fr;
+  }
+
+  .stats-grid,
+  .forecast-grid,
+  .performance-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .layout {
+    display: block;
+  }
+
+  .sidebar {
+    position: relative;
+
+    height: auto;
+
+    border-right: 0;
+    border-bottom: 1px solid #1d2633;
+  }
+
+  .content {
+    padding: 25px 18px;
+  }
+
+  .stats-grid,
+  .forecast-grid,
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 0 18px;
+  }
+
+  .brand p {
+    display: none;
+  }
+
+  .map-legend {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+}
+
+/* =====================================================
+   PROFESSIONAL CYCLONE MAP
+===================================================== */
+
+.map-wrapper {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #243043;
+  border-radius: 18px;
+
+  background: #0b111b;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.cyclone-map {
+  width: 100%;
+  height: 600px;
+
+  background: #0b111b;
+}
+
+
+/* =====================================================
+   DARK LEAFLET MAP
+===================================================== */
+
+.cyclone-map .leaflet-tile {
+  filter:
+    brightness(0.62)
+    contrast(1.15)
+    saturate(0.75);
+}
+
+.cyclone-map .leaflet-control-zoom {
+  border: 1px solid #263449 !important;
+  box-shadow: none !important;
+}
+
+.cyclone-map .leaflet-control-zoom a {
+  background: #111a27 !important;
+  color: #cbd5e1 !important;
+
+  border-bottom: 1px solid #263449 !important;
+}
+
+.cyclone-map .leaflet-control-zoom a:hover {
+  background: #1b2a40 !important;
+  color: white !important;
+}
+
+
+/* =====================================================
+   MAP HEADER
+===================================================== */
+
+.map-overlay-header {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+  right: 18px;
+
+  z-index: 900;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  pointer-events: none;
+}
+
+.map-overlay-header > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  padding: 11px 14px;
+
+  border: 1px solid rgba(52, 69, 92, 0.8);
+  border-radius: 10px;
+
+  background: rgba(8, 13, 22, 0.88);
+
+  backdrop-filter: blur(10px);
+}
+
+.map-view-label {
+  color: #60a5fa;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.map-overlay-header strong {
+  font-size: 15px;
+  color: #f8fafc;
+}
+
+
+/* =====================================================
+   AI BADGE
+===================================================== */
+
+.map-live-badge {
+  display: flex !important;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 11px;
+
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 20px;
+
+  background: rgba(8, 20, 15, 0.9);
+
+  color: #86efac;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.map-live-badge span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 10px rgba(34, 197, 94, 0.8);
+}
+
+
+/* =====================================================
+   LEGEND
+===================================================== */
+
+.map-legend {
+  position: absolute;
+
+  left: 18px;
+  bottom: 18px;
+
+  z-index: 900;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 11px 14px;
+
+  border: 1px solid #29364a;
+  border-radius: 10px;
+
+  background: rgba(8, 13, 22, 0.92);
+
+  backdrop-filter: blur(10px);
+
+  color: #b7c2d1;
+
+  font-size: 10px;
+}
+
+.map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legend-line {
+  width: 20px;
+  height: 3px;
+
+  display: inline-block;
+
+  border-radius: 10px;
+}
+
+.legend-line.historical {
+  background: #3b82f6;
+}
+
+.legend-line.forecast {
+  background: #f97316;
+}
+
+.legend-circle {
+  width: 10px;
+  height: 10px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background: rgba(167, 139, 250, 0.35);
+
+  border: 1px solid #a78bfa;
+}
+
+.legend-current {
+  width: 10px;
+  height: 10px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  border: 2px solid white;
+}
+
+
+/* =====================================================
+   VIEW DESCRIPTION
+===================================================== */
+
+.map-view-description {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  z-index: 900;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+
+  padding: 10px 13px;
+
+  border: 1px solid #29364a;
+  border-radius: 10px;
+
+  background: rgba(8, 13, 22, 0.92);
+
+  backdrop-filter: blur(10px);
+}
+
+.map-view-description strong {
+  color: #f1f5f9;
+
+  font-size: 11px;
+}
+
+.map-view-description span {
+  color: #7f8da0;
+
+  font-size: 9px;
+}
+
+
+/* =====================================================
+   POPUP
+===================================================== */
+
+.map-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  min-width: 170px;
+}
+
+.map-popup strong {
+  margin-bottom: 4px;
+
+  color: #111827;
+
+  font-size: 13px;
+}
+
+.map-popup span {
+  color: #475569;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   EMPTY MAP
+===================================================== */
+
+.map-empty {
+  height: 600px;
+
+  display: grid;
+  place-items: center;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   TRACK VIEW
+===================================================== */
+
+.track-map .cyclone-map {
+  height: 600px;
+}
+
+
+/* =====================================================
+   INDIA VIEW
+===================================================== */
+
+.india-map .cyclone-map {
+  height: 600px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .cyclone-map,
+  .track-map .cyclone-map,
+  .india-map .cyclone-map {
+    height: 500px;
+  }
+
+  .map-legend {
+    left: 12px;
+    bottom: 12px;
+
+    gap: 9px;
+
+    flex-wrap: wrap;
+
+    max-width: 70%;
+  }
+
+  .map-view-description {
+    display: none;
+  }
+
+  .map-overlay-header {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+  }
+
+}
+/* =====================================================
+   MAP UPGRADE
+===================================================== */
+
+.map-wrapper {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #263449;
+  border-radius: 18px;
+
+  background: #09101a;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.cyclone-map {
+  width: 100%;
+  height: 600px;
+  background: #09101a;
+}
+
+
+/* DARK MAP */
+
+.cyclone-map .leaflet-tile {
+  filter:
+    brightness(0.60)
+    contrast(1.15)
+    saturate(0.75);
+}
+
+.cyclone-map .leaflet-control-zoom {
+  border: 1px solid #263449 !important;
+  box-shadow: none !important;
+}
+
+.cyclone-map .leaflet-control-zoom a {
+  background: #111a27 !important;
+  color: #dbeafe !important;
+  border-color: #263449 !important;
+}
+
+.cyclone-map .leaflet-control-zoom a:hover {
+  background: #1d2c42 !important;
+}
+
+
+/* MAP HEADER */
+
+.map-overlay-header {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+  right: 18px;
+
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  pointer-events: none;
+}
+
+.map-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  padding: 11px 15px;
+
+  border: 1px solid #334155;
+  border-radius: 10px;
+
+  background: rgba(8, 13, 22, 0.90);
+
+  backdrop-filter: blur(12px);
+}
+
+.map-title-box span {
+  color: #60a5fa;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.map-title-box strong {
+  color: #f8fafc;
+
+  font-size: 15px;
+}
+
+
+/* AI BADGE */
+
+.map-ai-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border: 1px solid rgba(34, 197, 94, 0.30);
+  border-radius: 20px;
+
+  background: rgba(7, 22, 15, 0.92);
+
+  color: #86efac;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: .7px;
+}
+
+.map-ai-badge i {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 10px rgba(34, 197, 94, .8);
+}
+
+
+/* LEGEND */
+
+.map-legend {
+  position: absolute;
+
+  left: 18px;
+  bottom: 18px;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 11px 14px;
+
+  border: 1px solid #29364a;
+  border-radius: 10px;
+
+  background: rgba(8, 13, 22, 0.92);
+
+  backdrop-filter: blur(10px);
+
+  color: #b8c4d4;
+
+  font-size: 10px;
+}
+
+.map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legend-line {
+  width: 20px;
+  height: 3px;
+
+  display: inline-block;
+
+  border-radius: 10px;
+}
+
+.legend-line.historical {
+  background: #3b82f6;
+}
+
+.legend-line.forecast {
+  background: #f97316;
+}
+
+.legend-circle {
+  width: 10px;
+  height: 10px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background: rgba(167, 139, 250, .25);
+
+  border: 1px solid #a78bfa;
+}
+
+.legend-current {
+  width: 10px;
+  height: 10px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  border: 2px solid white;
+}
+
+
+/* VIEW DESCRIPTION */
+
+.map-view-description {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+
+  padding: 10px 13px;
+
+  border: 1px solid #29364a;
+  border-radius: 10px;
+
+  background: rgba(8, 13, 22, 0.92);
+
+  backdrop-filter: blur(10px);
+}
+
+.map-view-description strong {
+  color: #f1f5f9;
+  font-size: 11px;
+}
+
+.map-view-description span {
+  color: #7f8da0;
+  font-size: 9px;
+}
+
+
+/* POPUP */
+
+.map-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  min-width: 170px;
+}
+
+.map-popup strong {
+  margin-bottom: 4px;
+
+  color: #111827;
+  font-size: 13px;
+}
+
+.map-popup span {
+  color: #475569;
+  font-size: 11px;
+}
+
+
+/* EMPTY */
+
+.map-empty {
+  height: 600px;
+
+  display: grid;
+  place-items: center;
+
+  color: #64748b;
+  font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .cyclone-map {
+    height: 500px;
+  }
+
+  .map-legend {
+    left: 12px;
+    bottom: 12px;
+
+    max-width: 70%;
+
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .map-view-description {
+    display: none;
+  }
+
+}
+
+/* =====================================================
+   INDIA REGIONAL VIEW
+===================================================== */
+
+.india-map {
+  background: #08111c;
+}
+
+.india-map .cyclone-map {
+  height: 600px;
+}
+
+
+/* Make the base map darker */
+
+.india-map .leaflet-tile {
+  filter:
+    brightness(0.48)
+    contrast(1.20)
+    saturate(0.55);
+}
+
+
+/* Remove visual clutter from attribution */
+
+.india-map .leaflet-control-attribution {
+  background: rgba(7, 12, 20, 0.75) !important;
+
+  color: #64748b !important;
+
+  font-size: 8px;
+}
+
+.india-map .leaflet-control-attribution a {
+  color: #64748b !important;
+}
+
+
+/* =====================================================
+   INDIA VIEW — OCEAN ATMOSPHERE
+===================================================== */
+
+.india-map::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 400;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 32% 52%,
+      rgba(37, 99, 235, 0.08),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 68% 55%,
+      rgba(14, 165, 233, 0.05),
+      transparent 35%
+    );
+
+  mix-blend-mode: screen;
+}
+
+
+/* =====================================================
+   REGION LABELS
+===================================================== */
+
+.india-region-label {
+  position: absolute;
+
+  z-index: 700;
+
+  pointer-events: none;
+
+  color: rgba(148, 163, 184, 0.65);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.india-region-label.arabian {
+  left: 17%;
+  top: 48%;
+}
+
+.india-region-label.bay {
+  right: 13%;
+  top: 55%;
+}
+
+.india-region-label.india {
+  left: 61%;
+  top: 35%;
+}
+
+
+/* =====================================================
+   CURRENT CYCLONE EMPHASIS
+===================================================== */
+
+.india-map .leaflet-interactive {
+  transition: opacity 0.2s ease;
+}
+
+
+/* =====================================================
+   FORECAST POINTS
+===================================================== */
+
+.india-map .leaflet-marker-icon {
+  filter:
+    drop-shadow(0 0 5px rgba(249, 115, 22, 0.6));
+}
+
+
+/* =====================================================
+   LEGEND
+===================================================== */
+
+.india-map .map-legend {
+  background: rgba(7, 12, 20, 0.94);
+}
+
+
+/* =====================================================
+   INDIA VIEW DESCRIPTION
+===================================================== */
+
+.india-map .map-view-description {
+  background: rgba(7, 12, 20, 0.94);
+}
